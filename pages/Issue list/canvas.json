@@ -1,0 +1,779 @@
+{
+  "unpublishedPage": {
+    "name": "Issue list",
+    "slug": "issue-list",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1168,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1290,
+          "containerStyle": "none",
+          "snapRows": 81,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 59,
+          "minHeight": 820,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Container1",
+              "borderColor": "transparent",
+              "isCanvas": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "borderRadius"
+                }
+              ],
+              "displayName": "Container",
+              "iconSVG": "/static/media/icon.1977dca3.svg",
+              "topRow": 1,
+              "bottomRow": 127,
+              "parentRowSpace": 10,
+              "type": "CONTAINER_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 20.0625,
+              "leftColumn": 1,
+              "children": [
+                {
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "displayName": "Canvas",
+                  "topRow": 0,
+                  "bottomRow": 1230,
+                  "parentRowSpace": 1,
+                  "type": "CANVAS_WIDGET",
+                  "canExtend": false,
+                  "hideCard": true,
+                  "minHeight": 400,
+                  "parentColumnSpace": 1,
+                  "leftColumn": 0,
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Form1",
+                      "isCanvas": true,
+                      "displayName": "Form",
+                      "iconSVG": "/static/media/icon.ea3e08d1.svg",
+                      "topRow": 11,
+                      "bottomRow": 49,
+                      "parentRowSpace": 10,
+                      "type": "FORM_WIDGET",
+                      "hideCard": false,
+                      "shouldScrollContents": false,
+                      "parentColumnSpace": 19.123046875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "children": [
+                        {
+                          "boxShadow": "none",
+                          "widgetName": "Canvas2",
+                          "displayName": "Canvas",
+                          "topRow": 0,
+                          "bottomRow": 390,
+                          "parentRowSpace": 1,
+                          "type": "CANVAS_WIDGET",
+                          "canExtend": false,
+                          "hideCard": true,
+                          "minHeight": 400,
+                          "parentColumnSpace": 1,
+                          "dynamicTriggerPathList": [],
+                          "leftColumn": 0,
+                          "dynamicBindingPathList": [],
+                          "children": [
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "IssueDate",
+                              "isFilterable": false,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Release Date",
+                              "topRow": 24,
+                              "bottomRow": 28,
+                              "parentRowSpace": 10,
+                              "type": "DROP_DOWN_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "{{FetchIssueDate.options.slice(-1)[0].value}}",
+                              "selectionType": "SINGLE_SELECT",
+                              "animateLoading": true,
+                              "parentColumnSpace": 18.880859375,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "options"
+                                },
+                                {
+                                  "key": "defaultOptionValue"
+                                },
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "{{ GetReleases.data.map((row) => { \n      return { label: row.ReleaseId, value: row.ReleaseId } \n   }) \n}}",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "lv45ygl8lk",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "sos1y984ow",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Environment",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Environment",
+                              "topRow": 19,
+                              "bottomRow": 23,
+                              "parentRowSpace": 10,
+                              "type": "DROP_DOWN_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "Release",
+                              "selectionType": "SINGLE_SELECT",
+                              "parentColumnSpace": 18.21295166015625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "[\n  \n\t{\n    \"label\": \"Production\",\n    \"value\": \"Production\"\n  },\n  {\n    \"label\": \"Release\",\n    \"value\": \"Release\"\n  },\n  {\n    \"label\": \"Deploy Preview\",\n    \"value\": \"Deploy Preview\"\n  }\n]",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "my6xf97zwv",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": false,
+                              "rightColumn": 63,
+                              "widgetId": "m4kj0tdhzu",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Text1",
+                              "borderColor": "#231F20",
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "fontSize"
+                                }
+                              ],
+                              "displayName": "Text",
+                              "iconSVG": "/static/media/icon.97c59b52.svg",
+                              "topRow": 1,
+                              "bottomRow": 5,
+                              "type": "TEXT_WIDGET",
+                              "hideCard": false,
+                              "dynamicTriggerPathList": [],
+                              "overflow": "NONE",
+                              "fontFamily": "System Default",
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [],
+                              "borderWidth": "1",
+                              "text": "Enter the detail of issues found on Regression",
+                              "key": "85fbv0whjm",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 63,
+                              "textAlign": "CENTER",
+                              "widgetId": "ql7dpf0bv0",
+                              "isVisible": true,
+                              "fontStyle": "BOLD",
+                              "textColor": "#231F20",
+                              "version": 1,
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "fontSize": "1.125rem"
+                            },
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "FormButton1",
+                              "onClick": "{{store_issues.run(() => get_issues.run(), () => {})}}",
+                              "buttonColor": "#03B365",
+                              "displayName": "FormButton",
+                              "iconSVG": "/static/media/icon.c8f649ed.svg",
+                              "topRow": 30,
+                              "bottomRow": 34,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "hideCard": true,
+                              "dynamicTriggerPathList": [
+                                {
+                                  "key": "onClick"
+                                }
+                              ],
+                              "leftColumn": 46,
+                              "dynamicBindingPathList": [],
+                              "text": "Submit",
+                              "key": "bylmee2xld",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 62,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "wm945tfqgt",
+                              "isVisible": true,
+                              "version": 1,
+                              "recaptchaType": "V3",
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "disabledWhenInvalid": true,
+                              "borderRadius": "0px",
+                              "buttonVariant": "PRIMARY"
+                            },
+                            {
+                              "resetFormOnClick": true,
+                              "boxShadow": "none",
+                              "widgetName": "FormButton2",
+                              "buttonColor": "#03B365",
+                              "displayName": "FormButton",
+                              "iconSVG": "/static/media/icon.c8f649ed.svg",
+                              "topRow": 30,
+                              "bottomRow": 34,
+                              "type": "FORM_BUTTON_WIDGET",
+                              "hideCard": true,
+                              "leftColumn": 2,
+                              "text": "Reset",
+                              "key": "bylmee2xld",
+                              "labelTextSize": "0.875rem",
+                              "rightColumn": 18,
+                              "isDefaultClickDisabled": true,
+                              "widgetId": "to09h4xb9s",
+                              "isVisible": true,
+                              "version": 1,
+                              "recaptchaType": "V3",
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "disabledWhenInvalid": false,
+                              "borderRadius": "0px",
+                              "buttonVariant": "SECONDARY"
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Bug",
+                              "displayName": "Input",
+                              "iconSVG": "/static/media/icon.9f505595.svg",
+                              "topRow": 6,
+                              "bottomRow": 10,
+                              "parentRowSpace": 10,
+                              "autoFocus": false,
+                              "type": "INPUT_WIDGET",
+                              "hideCard": false,
+                              "parentColumnSpace": 18.21295166015625,
+                              "dynamicTriggerPathList": [],
+                              "resetOnSubmit": true,
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "labelStyle": "",
+                              "inputType": "TEXT",
+                              "placeholderText": "Enter issue summary",
+                              "isDisabled": false,
+                              "key": "1h9pnnrvbp",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 63,
+                              "widgetId": "cyag5hqxtp",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "label": "Bug Summary",
+                              "allowCurrencyChange": false,
+                              "version": 1,
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px",
+                              "iconAlign": "left",
+                              "defaultText": ""
+                            },
+                            {
+                              "boxShadow": "none",
+                              "widgetName": "Priority",
+                              "isFilterable": true,
+                              "displayName": "Select",
+                              "iconSVG": "/static/media/icon.bd99caba.svg",
+                              "labelText": "Priority",
+                              "topRow": 13,
+                              "bottomRow": 17,
+                              "parentRowSpace": 10,
+                              "type": "DROP_DOWN_WIDGET",
+                              "serverSideFiltering": false,
+                              "hideCard": false,
+                              "defaultOptionValue": "Low",
+                              "selectionType": "SINGLE_SELECT",
+                              "parentColumnSpace": 18.21295166015625,
+                              "dynamicTriggerPathList": [],
+                              "leftColumn": 1,
+                              "dynamicBindingPathList": [
+                                {
+                                  "key": "accentColor"
+                                }
+                              ],
+                              "options": "[\n  {\n    \"label\": \"Blocker\",\n    \"value\": \"Blocker\"\n  },\n\t{\n    \"label\": \"critical\",\n    \"value\": \"Critical\"\n  },\n  {\n    \"label\": \"High\",\n    \"value\": \"High\"\n  },\n  {\n    \"label\": \"Low\",\n    \"value\": \"Low\"\n  }\n]",
+                              "placeholderText": "Select option",
+                              "isDisabled": false,
+                              "key": "my6xf97zwv",
+                              "labelTextSize": "0.875rem",
+                              "isRequired": true,
+                              "rightColumn": 63,
+                              "widgetId": "i9u6jae763",
+                              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                              "isVisible": true,
+                              "version": 1,
+                              "parentId": "g0z6793wcp",
+                              "renderMode": "CANVAS",
+                              "isLoading": false,
+                              "borderRadius": "0px"
+                            }
+                          ],
+                          "key": "s15l0s3mdj",
+                          "labelTextSize": "0.875rem",
+                          "rightColumn": 458.953125,
+                          "detachFromLayout": true,
+                          "widgetId": "g0z6793wcp",
+                          "containerStyle": "none",
+                          "isVisible": true,
+                          "version": 1,
+                          "parentId": "78ksn5pag7",
+                          "renderMode": "CANVAS",
+                          "isLoading": false,
+                          "borderRadius": "0px"
+                        }
+                      ],
+                      "key": "iq88l5jfxm",
+                      "labelTextSize": "0.875rem",
+                      "backgroundColor": "#F6F7F8",
+                      "rightColumn": 63,
+                      "widgetId": "78ksn5pag7",
+                      "isVisible": true,
+                      "parentId": "o5wmk7dzt5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text2",
+                      "borderColor": "#231F20",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 2,
+                      "bottomRow": 10,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 19.123046875,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "borderWidth": "2",
+                      "text": "LIST OF ISSUES ON REGRESSION",
+                      "key": "85fbv0whjm",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textAlign": "CENTER",
+                      "widgetId": "3kk0ae6sbs",
+                      "isVisible": true,
+                      "fontStyle": "BOLD,ITALIC",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "o5wmk7dzt5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Table1",
+                      "defaultPageSize": 0,
+                      "columnOrder": [
+                        "IssueDate",
+                        "Bug",
+                        "Priority",
+                        "Environment",
+                        "rowIndex"
+                      ],
+                      "isVisibleDownload": true,
+                      "dynamicPropertyPathList": [],
+                      "displayName": "Table",
+                      "iconSVG": "/static/media/icon.db8a9cbd.svg",
+                      "topRow": 64,
+                      "bottomRow": 121,
+                      "isSortable": true,
+                      "parentRowSpace": 10,
+                      "type": "TABLE_WIDGET",
+                      "defaultSelectedRow": "0",
+                      "hideCard": false,
+                      "parentColumnSpace": 19.123046875,
+                      "dynamicTriggerPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.Bug.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Priority.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.Environment.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.rowIndex.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.IssueDate.computedValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "primaryColumns": {
+                        "Bug": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "Bug",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Bug",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Bug))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "Priority": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "Priority",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Priority",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Priority))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "Environment": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "Environment",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "Environment",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Environment))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "rowIndex": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "rowIndex",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": false,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "rowIndex",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.rowIndex))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "IssueDate": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "IssueDate",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "IssueDate",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.IssueDate))}}",
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "delimiter": ",",
+                      "key": "kwmr8z7hv3",
+                      "derivedColumns": {},
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textSize": "0.875rem",
+                      "widgetId": "u0zwywtogq",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "tableData": "{{get_issues.data}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "enableClientSideSearch": true,
+                      "version": 3,
+                      "totalRecordsCount": 0,
+                      "parentId": "o5wmk7dzt5",
+                      "serverSidePaginationEnabled": true,
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "isVisiblePagination": false,
+                      "verticalAlignment": "CENTER",
+                      "columnSizeMap": {
+                        "task": 245,
+                        "step": 62,
+                        "status": 75,
+                        "Bug": 641,
+                        "Priority": 179
+                      }
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text3",
+                      "borderColor": "#231F20",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 52,
+                      "bottomRow": 56,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "parentColumnSpace": 19.123046875,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "borderWidth": "2",
+                      "text": "LIST OF ISSUES",
+                      "key": "85fbv0whjm",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textAlign": "CENTER",
+                      "widgetId": "ljbtvzoi7d",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "o5wmk7dzt5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.125rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "FetchIssueDate",
+                      "isFilterable": false,
+                      "displayName": "Select",
+                      "iconSVG": "/static/media/icon.bd99caba.svg",
+                      "labelText": "Release Date",
+                      "topRow": 58,
+                      "bottomRow": 62,
+                      "parentRowSpace": 10,
+                      "type": "DROP_DOWN_WIDGET",
+                      "serverSideFiltering": false,
+                      "hideCard": false,
+                      "defaultOptionValue": "{{FetchIssueDate.options.slice(-1)[0].value}}\n",
+                      "selectionType": "SINGLE_SELECT",
+                      "animateLoading": true,
+                      "parentColumnSpace": 18.880859375,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onOptionChange"
+                        }
+                      ],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "options"
+                        },
+                        {
+                          "key": "defaultOptionValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "options": "{{ GetReleases.data.map((row) => { \n      return { label: row.ReleaseId, value: row.ReleaseId } \n   }) \n}}",
+                      "placeholderText": "Select option",
+                      "isDisabled": false,
+                      "key": "lv45ygl8lk",
+                      "labelTextSize": "0.875rem",
+                      "isRequired": false,
+                      "rightColumn": 21,
+                      "widgetId": "7e3skudbt9",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisible": true,
+                      "version": 1,
+                      "parentId": "o5wmk7dzt5",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "onOptionChange": "{{get_issues.run()}}"
+                    }
+                  ],
+                  "key": "s15l0s3mdj",
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 481.5,
+                  "detachFromLayout": true,
+                  "widgetId": "o5wmk7dzt5",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "nhiyf441l7",
+                  "renderMode": "CANVAS",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "borderWidth": "0",
+              "key": "8p5re82chq",
+              "labelTextSize": "0.875rem",
+              "backgroundColor": "#FFFFFF",
+              "rightColumn": 63,
+              "widgetId": "nhiyf441l7",
+              "containerStyle": "card",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "borderRadius": "0px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Issue list_GetReleases",
+              "name": "GetReleases",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Issue list_get_issues",
+              "name": "get_issues",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "FetchIssueDate.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Issue list",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "policies": [],
+  "gitSyncId": "61b8652933c6ae6163af3b67_61c433d3e89bc475f3cbc4ca"
+}
