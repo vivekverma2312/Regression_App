@@ -4,6 +4,12 @@
   "unreadCommentThreads": 0,
   "color": "#FFDEDE",
   "icon": "pants",
+  "unpublishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
   "evaluationVersion": 2,
   "applicationVersion": 1,
   "isManualUpdate": false,

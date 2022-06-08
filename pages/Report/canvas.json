@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 58,
+          "version": 59,
           "minHeight": 820,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
@@ -408,6 +408,18 @@
               "timeoutInMillisecond": 10000
             }
           ]
+        ],
+        "widgetNames": [
+          "Button1",
+          "Button2",
+          "Canvas1",
+          "Container1",
+          "FetchIssueDate",
+          "MainContainer",
+          "RichTextEditor1",
+          "Text1",
+          "Text2",
+          "Text3"
         ],
         "validOnPageLoadActions": true,
         "id": "Report",
