@@ -369,9 +369,13 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "fontFamily": "System Default",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        }
+                      ],
                       "text": "Test Coverage (%)",
                       "key": "85fbv0whjm",
                       "labelTextSize": "0.875rem",
@@ -440,11 +444,17 @@
                       "hideCard": false,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "fontFamily": "System Default",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "leftColumn": 1,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
+                        },
+                        {
+                          "key": "textColor"
+                        },
+                        {
+                          "key": "fontFamily"
                         }
                       ],
                       "text": "{{(100- featureCount.data.length/fetch_features.data.length*100).toFixed(2)}}% of testing pending",
@@ -456,7 +466,7 @@
                       "widgetId": "jii0s2m9u9",
                       "isVisible": true,
                       "fontStyle": "BOLD",
-                      "textColor": "#03B365",
+                      "textColor": "{{appsmith.theme.colors.primaryColor}}",
                       "version": 1,
                       "parentId": "zingyug4sl",
                       "renderMode": "CANVAS",
@@ -477,9 +487,13 @@
                       "parentColumnSpace": 4.330322265625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "fontFamily": "System Default",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "leftColumn": 1,
-                      "dynamicBindingPathList": [],
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "fontFamily"
+                        }
+                      ],
                       "borderWidth": "",
                       "text": "Numbers of Features",
                       "key": "ax3gkce5uo",
@@ -511,11 +525,14 @@
                       "parentColumnSpace": 4.330322265625,
                       "dynamicTriggerPathList": [],
                       "overflow": "NONE",
-                      "fontFamily": "System Default",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
                       "leftColumn": 31,
                       "dynamicBindingPathList": [
                         {
                           "key": "text"
+                        },
+                        {
+                          "key": "fontFamily"
                         }
                       ],
                       "text": "{{(featureCount.data.length/fetch_features.data.length*100).toFixed(2)}}%",
@@ -628,7 +645,7 @@
                 "Widget": 265,
                 "Slno": 95
               },
-              "widgetName": "Table1Copy",
+              "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
                 "Slno",
@@ -672,7 +689,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "Feature",
-                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.Widget))}}",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Widget))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
                 },
@@ -692,7 +709,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "Slno",
-                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.Slno))}}",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Slno))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
                 },
@@ -712,7 +729,7 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "Username",
-                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.Username))}}",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.Username))}}",
                   "borderRadius": "0px",
                   "boxShadow": "none"
                 },
@@ -732,8 +749,8 @@
                   "isCellVisible": true,
                   "isDerived": false,
                   "label": "status",
-                  "computedValue": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                  "iconName": "{{Table1Copy.sanitizedTableData.map((currentRow) => ( currentRow.status === \"complete\" ? \"tick-circle\" : \"full-circle\"))}}",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
+                  "iconName": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.status === \"complete\" ? \"tick-circle\" : \"full-circle\"))}}",
                   "borderRadius": "9999px",
                   "boxShadowColor": "#2E3D49",
                   "onClick": "{{Api1.run(() => {fetch_features.run(); featureCount.run();}, () => {})}}",
@@ -2558,7 +2575,7 @@
           "Release_details",
           "Select2",
           "Statbox1",
-          "Table1Copy",
+          "Table1",
           "Text13",
           "Text13Copy1",
           "Text14",
