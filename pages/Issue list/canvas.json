@@ -1513,7 +1513,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Regression App",
+                      "text": "Issue List",
                       "key": "15e31e267x",
                       "rightColumn": 27,
                       "textAlign": "LEFT",
