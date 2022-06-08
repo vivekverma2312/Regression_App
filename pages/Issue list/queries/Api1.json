@@ -2,12 +2,11 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "commitId",
+    "name": "Api1",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
         "url": "https://api.github.com"
       },
       "invalids": [],
@@ -17,33 +16,56 @@
       "policies": [],
       "userPermissions": []
     },
-    "pageId": "Report",
+    "pageId": "Issue list",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/repos/appsmithorg/appsmith/commits/release",
-      "headers": [],
+      "path": "/repos/appsmithorg/appsmith/issues/{{Bug.text}}",
+      "headers": [
+        {
+          "key": "Accept",
+          "value": "application/vnd.github.v3+json"
+        },
+        {
+          "key": "Authorization",
+          "value": "Basic TmlraGlsLU5hbmRhZ29wYWw6ODJjY2ZlMDljN2M4MDU5M2VkOTRjZTI1OTA0OTEyYmQ1OTA0NWJmNA=="
+        },
+        {
+          "key": "content-type",
+          "value": "text/plain"
+        }
+      ],
       "encodeParamsToggle": true,
       "queryParameters": [],
+      "bodyFormData": [],
       "httpMethod": "GET",
       "pluginSpecifiedTemplates": [
         {
           "value": true
         }
-      ]
+      ],
+      "formData": {
+        "apiContentType": "text/plain"
+      }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "path"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
-    "userSetOnLoad": false,
+    "jsonPathKeys": [
+      "Bug.text"
+    ],
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Report_commitId",
+  "id": "Issue list_Api1",
   "deleted": false,
-  "gitSyncId": "61b8652933c6ae6163af3b67_61d42901a4437918c0215515"
+  "gitSyncId": "629f2eac360bee1cd628f19a_62a05fc1e56c5566a628db16"
 }

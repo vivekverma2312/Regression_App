@@ -25,7 +25,6 @@
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "",
       "httpMethod": "GET",
       "pluginSpecifiedTemplates": [
         {

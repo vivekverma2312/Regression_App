@@ -80,6 +80,10 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
+    "Issue list_Api1": {
+      "unpublishedUserSetOnLoad": true,
+      "publishedUserSetOnLoad": true
+    },
     "Issue list_GetReleases": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
