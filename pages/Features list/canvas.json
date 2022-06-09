@@ -959,7 +959,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "#FFC13D",
-                      "text": "Good Morning {{appsmith.user.name? appsmith.user.name.split(/[@ ]/)[0] :appsmith.user.email.split('@')[0]}}! 🍎",
+                      "text": "Good Morning {{appsmith.user.name? appsmith.user.name.split(/[@ ]/)[0] :appsmith.user.email.split('@')[0]}}! 🚀",
                       "key": "15e31e267x",
                       "rightColumn": 17,
                       "textAlign": "LEFT",
