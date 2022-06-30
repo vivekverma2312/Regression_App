@@ -763,7 +763,7 @@
               "rightColumn": 37,
               "textSize": "0.875rem",
               "widgetId": "0f8txdsc5f",
-              "tableData": "{{\n\n fetch_features.data.map((task) => { \n       return {\n         Slno: task.Slno,\n         Widget: task.Widget,\n\t\t\t\tUsername: task.Username,\n\t\t\t\t status:task.status\n        \n      }  \n  }, 0) \n}}",
+              "tableData": "{{\n\n features.data.map((task) => { \n       return {\n         Slno: task.Slno,\n         Widget: task.Widget,\n\t\t\t\tUsername: task.Username,\n\t\t\t\t status:task.status\n        \n      }  \n  }, 0) \n}}",
               "label": "Data",
               "searchKey": "",
               "parentId": "0",
@@ -2734,8 +2734,28 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Features list_features",
+              "name": "features",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Features list_GetReleases",
               "name": "GetReleases",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Features list_featureCount",
+              "name": "featureCount",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
@@ -2762,16 +2782,6 @@
           ],
           [
             {
-              "id": "Features list_featureCount",
-              "name": "featureCount",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Features list_GetTemplatesTasks",
               "name": "GetTemplatesTasks",
               "confirmBeforeExecute": false,
@@ -2782,69 +2792,6 @@
               "timeoutInMillisecond": 10000
             }
           ]
-        ],
-        "widgetNames": [
-          "Button1",
-          "Button10",
-          "Button11",
-          "Button12",
-          "Button13",
-          "Button2",
-          "Button8",
-          "Button9",
-          "Canvas2",
-          "Canvas2CopyCopy",
-          "Canvas2CopyCopy1",
-          "Canvas3",
-          "Canvas4",
-          "Canvas5",
-          "Canvas7",
-          "Canvas8",
-          "Chart1",
-          "Container2Copy",
-          "DatePicker1",
-          "Form1",
-          "Form2",
-          "FormButton1",
-          "FormButton2",
-          "Icon1",
-          "IconButton4",
-          "IconButton5",
-          "Image1",
-          "Input1",
-          "Input2",
-          "Input3",
-          "Insert_Modal",
-          "MainContainer",
-          "ModalDatePickerNewRelease",
-          "ModalNewRelease",
-          "ModalSelectTemplate",
-          "ModalTableTemplateTask",
-          "Regression",
-          "RegressionCopy",
-          "Release_details",
-          "Select2",
-          "Select3",
-          "Statbox1",
-          "Table1",
-          "Text13",
-          "Text13Copy1",
-          "Text14",
-          "Text14Copy1",
-          "Text25",
-          "Text26",
-          "Text27",
-          "Text28",
-          "Text29",
-          "Text3",
-          "Text6",
-          "Text7",
-          "Text9",
-          "Text9CopyCopy",
-          "Unfreeze_modal",
-          "colInput1",
-          "colInput2",
-          "update_buttonCopy"
         ],
         "validOnPageLoadActions": true,
         "id": "Features list",
@@ -2858,6 +2805,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "policies": [],
   "gitSyncId": "61b8652933c6ae6163af3b67_61c433d3e89bc475f3cbc4aa"
 }

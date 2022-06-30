@@ -1,4 +1,22 @@
 {
+  "pages": [
+    {
+      "id": "Issue list",
+      "isDefault": false
+    },
+    {
+      "id": "Report",
+      "isDefault": false
+    },
+    {
+      "id": "Features list",
+      "isDefault": true
+    },
+    {
+      "id": "Add-Update Features",
+      "isDefault": false
+    }
+  ],
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
@@ -13,9 +31,5 @@
   "evaluationVersion": 2,
   "applicationVersion": 1,
   "isManualUpdate": false,
-  "createdAt": {
-    "seconds": 1654599130,
-    "nanos": 302000000
-  },
   "deleted": false
 }

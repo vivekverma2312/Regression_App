@@ -6,6 +6,7 @@
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
+      "organizationId": "608fc4348ceca96bed80a891",
       "datasourceConfiguration": {
         "sshProxyEnabled": false,
         "url": "https://api.github.com"
