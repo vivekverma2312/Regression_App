@@ -1718,18 +1718,6 @@
           ],
           [
             {
-              "id": "Issue list_Api1",
-              "name": "Api1",
-              "confirmBeforeExecute": false,
-              "pluginType": "API",
-              "jsonPathKeys": [
-                "Bug.text"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Issue list_get_issues",
               "name": "get_issues",
               "confirmBeforeExecute": false,
