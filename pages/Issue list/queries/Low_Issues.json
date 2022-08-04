@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "GetReleases",
+    "name": "Low_Issues",
     "datasource": {
       "name": "Regression datasource",
       "pluginId": "google-sheets-plugin",
@@ -25,7 +25,7 @@
         },
         {
           "key": "sheetUrl",
-          "value": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit#gid=1794729113"
+          "value": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit#gid=1160468385"
         },
         {
           "key": "range",
@@ -45,11 +45,11 @@
         },
         {
           "key": "rowLimit",
-          "value": "40"
+          "value": "500"
         },
         {
           "key": "sheetName",
-          "value": "Releases"
+          "value": "GetIssues"
         },
         {
           "key": "rowOffset",
@@ -76,7 +76,11 @@
         {
           "key": "where",
           "value": [
-            {}
+            {
+              "path": "IssueDate",
+              "operator": "EQ",
+              "value": "{{FetchIssueDate.selectedOptionValue}}"
+            }
           ]
         }
       ],
@@ -94,12 +98,12 @@
         "pagination": {
           "data": {
             "offset": "0",
-            "limit": "40"
+            "limit": "500"
           },
           "viewType": "component",
           "componentData": {
             "offset": "0",
-            "limit": "40"
+            "limit": "500"
           }
         },
         "projection": {
@@ -110,15 +114,18 @@
           "viewType": "component",
           "componentData": "ROWS"
         },
+        "range": {
+          "data": ""
+        },
         "rowIndex": {
           "data": "0",
           "viewType": "component",
           "componentData": "0"
         },
         "sheetName": {
-          "data": "Releases",
+          "data": "GetIssues",
           "viewType": "component",
-          "componentData": "Releases"
+          "componentData": "GetIssues"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit",
@@ -148,29 +155,49 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "LT"
+                "condition": "EQ",
+                "value": "{{FetchIssueDate.selectedOptionValue}}",
+                "key": "IssueDate"
+              },
+              {
+                "key": "Priority",
+                "condition": "EQ",
+                "value": "Low"
               }
             ]
           },
           "viewType": "component",
           "componentData": {
-            "condition": "AND"
+            "condition": "AND",
+            "children": [
+              {
+                "condition": "EQ",
+                "value": "{{FetchIssueDate.selectedOptionValue}}",
+                "key": "IssueDate"
+              }
+            ]
           }
         }
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[0].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "FetchIssueDate.selectedOptionValue"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Issue list_GetReleases",
+  "id": "Issue list_Low_Issues",
   "deleted": false,
-  "gitSyncId": "61b8652933c6ae6163af3b67_61d3ea24a4437918c01fb24a"
+  "gitSyncId": "629f2eac360bee1cd628f19a_62eb93b2b2f8027edfbe70d3"
 }

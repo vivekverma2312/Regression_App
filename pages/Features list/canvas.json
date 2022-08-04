@@ -263,6 +263,7 @@
               "setAdaptiveYMin": false,
               "widgetName": "Chart1",
               "allowScroll": false,
+              "dynamicPropertyPathList": [],
               "displayName": "Chart",
               "iconSVG": "/static/media/icon.6adbe31e.svg",
               "topRow": 42,
@@ -278,7 +279,11 @@
               },
               "animateLoading": true,
               "parentColumnSpace": 18.5712890625,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onDataPointClick"
+                }
+              ],
               "leftColumn": 39,
               "dynamicBindingPathList": [
                 {
@@ -310,6 +315,7 @@
                   ]
                 }
               },
+              "onDataPointClick": "",
               "key": "vojadc0uby",
               "labelTextSize": "0.875rem",
               "rightColumn": 61,

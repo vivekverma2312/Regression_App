@@ -287,7 +287,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.tableData.length}}",
+                      "text": "{{Low_Issues.data.length}}",
                       "key": "y188rc522x",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 46,
@@ -456,7 +456,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.tableData.length}}",
+                      "text": "{{High_Issues.data.length}}",
                       "key": "y188rc522x",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 46,
@@ -625,7 +625,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.tableData.length}}",
+                      "text": "{{Critical_Issues.data.length}}",
                       "key": "y188rc522x",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 46,
@@ -794,7 +794,7 @@
                         }
                       ],
                       "truncateButtonColor": "#FFC13D",
-                      "text": "{{Table1.tableData.}}",
+                      "text": "{{Blocker_Issues.data.length}}",
                       "key": "y188rc522x",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 46,
@@ -1601,6 +1601,11 @@
               "boxShadow": "none",
               "widgetName": "FetchIssueDate",
               "isFilterable": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "displayName": "Select",
               "iconSVG": "/static/media/icon.bd99caba.svg",
               "labelText": "Release Date",
@@ -1614,7 +1619,11 @@
               "defaultOptionValue": "{{FetchIssueDate.options.slice(-1)[0].value}}",
               "animateLoading": true,
               "parentColumnSpace": 19.8125,
-              "dynamicTriggerPathList": [],
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onOptionChange"
+                }
+              ],
               "leftColumn": 23,
               "dynamicBindingPathList": [
                 {
@@ -1647,7 +1656,8 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}"
+              "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+              "onOptionChange": "{{\nget_issues.run();\nBlocker_Issues.run();\nCritical_Issues.run();\nHigh_Issues.run();\nLow_Issues.run()\n}}"
             },
             {
               "widgetName": "Text23",
@@ -1704,7 +1714,21 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
+            {
+              "id": "Issue list_Api1",
+              "name": "Api1",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Bug.text"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
             {
               "id": "Issue list_get_issues",
               "name": "get_issues",
@@ -1718,12 +1742,42 @@
           ],
           [
             {
-              "id": "Issue list_Api1",
-              "name": "Api1",
+              "id": "Issue list_Blocker_Issues",
+              "name": "Blocker_Issues",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
+              "pluginType": "SAAS",
               "jsonPathKeys": [
-                "Bug.text"
+                "FetchIssueDate.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Issue list_Critical_Issues",
+              "name": "Critical_Issues",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "FetchIssueDate.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Issue list_High_Issues",
+              "name": "High_Issues",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "FetchIssueDate.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Issue list_Low_Issues",
+              "name": "Low_Issues",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "FetchIssueDate.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }
