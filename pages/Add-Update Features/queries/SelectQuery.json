@@ -78,7 +78,64 @@
             {}
           ]
         }
-      ]
+      ],
+      "formData": {
+        "command": {
+          "data": "FETCH_MANY",
+          "viewType": "component",
+          "componentData": "FETCH_MANY"
+        },
+        "entityType": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "pagination": {
+          "data": {
+            "offset": "0",
+            "limit": "100"
+          },
+          "viewType": "component",
+          "componentData": {
+            "offset": "0",
+            "limit": "100"
+          }
+        },
+        "queryFormat": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "sheetName": {
+          "data": "Features",
+          "viewType": "component",
+          "componentData": "Features"
+        },
+        "sheetUrl": {
+          "data": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit",
+          "viewType": "component",
+          "componentData": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit"
+        },
+        "smartSubstitution": {
+          "data": false,
+          "viewType": "component",
+          "componentData": false
+        },
+        "tableHeaderIndex": {
+          "data": "1",
+          "viewType": "component",
+          "componentData": "1"
+        },
+        "where": {
+          "data": {
+            "condition": "AND"
+          },
+          "viewType": "component",
+          "componentData": {
+            "condition": "AND"
+          }
+        }
+      }
     },
     "executeOnLoad": true,
     "dynamicBindingPathList": [],

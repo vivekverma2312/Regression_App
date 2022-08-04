@@ -72,7 +72,60 @@
           "key": "smartSubstitution",
           "value": false
         }
-      ]
+      ],
+      "formData": {
+        "command": {
+          "data": "DELETE_ONE",
+          "viewType": "component",
+          "componentData": "DELETE_ONE"
+        },
+        "entityType": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "pagination": {
+          "data": {
+            "offset": "{{(data_table.pageNo - 1) * data_table.pageSize}}",
+            "limit": "{{data_table.pageSize}}"
+          },
+          "viewType": "component",
+          "componentData": {
+            "offset": "{{(data_table.pageNo - 1) * data_table.pageSize}}",
+            "limit": "{{data_table.pageSize}}"
+          }
+        },
+        "queryFormat": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "rowIndex": {
+          "data": "{{data_table.triggeredRow.rowIndex}}",
+          "viewType": "component",
+          "componentData": "{{data_table.triggeredRow.rowIndex}}"
+        },
+        "sheetName": {
+          "data": "Features",
+          "viewType": "component",
+          "componentData": "Features"
+        },
+        "sheetUrl": {
+          "data": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit",
+          "viewType": "component",
+          "componentData": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit"
+        },
+        "smartSubstitution": {
+          "data": false,
+          "viewType": "component",
+          "componentData": false
+        },
+        "tableHeaderIndex": {
+          "data": "1",
+          "viewType": "component",
+          "componentData": "1"
+        }
+      }
     },
     "executeOnLoad": false,
     "isValid": true,

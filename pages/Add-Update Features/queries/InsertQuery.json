@@ -73,12 +73,54 @@
           "key": "smartSubstitution",
           "value": false
         }
-      ]
+      ],
+      "formData": {
+        "command": {
+          "data": "INSERT_ONE",
+          "viewType": "component",
+          "componentData": "INSERT_ONE"
+        },
+        "entityType": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "queryFormat": {
+          "data": "ROWS",
+          "viewType": "component",
+          "componentData": "ROWS"
+        },
+        "rowObjects": {
+          "data": "{ \n\t\t\"Username\": \"{{insert_col_input1.text}}\", \n\t\t\"Widget\": \"{{insert_col_input2.text}}\", \n\t\t\"Slno\": \"{{insert_col_input3.text}}\"\n}",
+          "viewType": "component",
+          "componentData": "{ \n\t\t\"Username\": \"{{insert_col_input1.text}}\", \n\t\t\"Widget\": \"{{insert_col_input2.text}}\", \n\t\t\"Slno\": \"{{insert_col_input3.text}}\"\n}"
+        },
+        "sheetName": {
+          "data": "Features",
+          "viewType": "component",
+          "componentData": "Features"
+        },
+        "sheetUrl": {
+          "data": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit",
+          "viewType": "component",
+          "componentData": "https://docs.google.com/spreadsheets/d/17lYNJeWO3YNJfaYpQO_iJRYj8Dz0l2xvvCoiQGanMk0/edit"
+        },
+        "smartSubstitution": {
+          "data": false,
+          "viewType": "component",
+          "componentData": false
+        },
+        "tableHeaderIndex": {
+          "data": "1",
+          "viewType": "component",
+          "componentData": "1"
+        }
+      }
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "pluginSpecifiedTemplates[9].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
